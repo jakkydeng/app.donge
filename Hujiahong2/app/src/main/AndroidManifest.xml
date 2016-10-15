@@ -4,6 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:versionCode="18"
     android:versionName="2.5.0" >
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:name="com.example.hujiahong.hujiahong.MyApplication"
@@ -22,6 +27,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.hujiahong.hujiahong.LeadershipCareActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="sensorLandscape"
+            tools:replace="android:screenOrientation"></activity>
     </application>
 
 

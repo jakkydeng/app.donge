@@ -1,0 +1,25 @@
+<resources>
+
+    <!-- 只横不竖 -->
+    <array name="only_horizon">
+        <item>@array/sv_videoview_layer_controllayer_history</item>
+    </array>
+    <!--&lt;!&ndash; 只有横屏没有竖屏 &ndash;&gt;-->
+    <!--<array name="sv_videoview_layer_controllayer2">-->
+        <!--<item>@null</item>-->
+        <!--<item>@layout/video_control_layer_horizon</item>-->
+    <!--</array>-->
+    <!-- 一组竖屏+横屏  直播讲堂 历史-->
+    <array name="sv_videoview_layer_controllayer_history">
+        <item>@layout/video_control_layer_history</item>
+        <item>@layout/video_control_layer_horizon</item>
+    </array>
+    <declare-styleable name="GifTextureView">
+        <attr name="src" format="reference|string" />
+        <attr name="isOpaque" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="GifView">
+        <attr name="freezesAnimation" format="boolean" />
+    </declare-styleable>
+
+</resources>
