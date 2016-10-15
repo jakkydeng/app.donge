@@ -44,7 +44,7 @@ public class MainActivity extends MyBaseActivity implements View.OnClickListener
     @Override
     public void onClick(View view) {
         if (view.equals(upButton)){
-            IntentUtils.intentToVideoPlayerAct(this,"","",5000);
+            IntentUtils.intentToVideoPlayerAct(this,"http://course-oss-cdn.oss-cn-beijing.aliyuncs.com/bak%2F%E5%87%8C%E4%BA%91%E9%B9%8F%E6%89%8B%E6%9C%AF.mp4","凌云鹏主任手术视频",1210000);
         }else if (view.equals(leftButton)){
 
         }
