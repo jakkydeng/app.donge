@@ -31,7 +31,7 @@
         <activity
             android:name="com.example.hujiahong.hujiahong.LeadershipCareActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
-            android:screenOrientation="sensorLandscape"
+            android:screenOrientation="portrait"
             tools:replace="android:screenOrientation"></activity>
     </application>
 

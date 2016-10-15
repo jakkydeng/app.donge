@@ -11,7 +11,7 @@
     <!--</array>-->
     <!-- 一组竖屏+横屏  直播讲堂 历史-->
     <array name="sv_videoview_layer_controllayer_history">
-        <item>null</item>
+        <item>@layout/video_control_layer_horizon</item>
         <item>@layout/video_control_layer_horizon</item>
     </array>
     <declare-styleable name="GifTextureView">

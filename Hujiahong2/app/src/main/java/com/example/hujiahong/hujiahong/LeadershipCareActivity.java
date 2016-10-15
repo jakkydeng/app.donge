@@ -71,9 +71,9 @@ public class LeadershipCareActivity extends MyBaseActivity implements VDVideoExt
             infoList.addVideoInfo(videoInfo);
 
         }
-        if (listView != null) {
-            listView.onVideoList(infoList);
-        }
+//        if (listView != null) {
+//            listView.onVideoList(infoList);
+//        }
         mVDVideoView.open(this, infoList);
         //   vDVideoInfoVO.setDuration((int) attach.getViedoTime() * 1000);
         mVDVideoView.play(0);
@@ -84,7 +84,7 @@ public class LeadershipCareActivity extends MyBaseActivity implements VDVideoExt
         mVDVideoView = (VDVideoView) findViewById(R.id.vv1);
         mVDVideoView.setVDVideoViewContainer((ViewGroup) mVDVideoView.getParent());
         // 简单方式处理的视频列表
-        listView = (VDVideoPlayListView) findViewById(R.id.play_list_view);
+       // listView = (VDVideoPlayListView) findViewById(R.id.play_list_view);
 
         registerListener();
     }
