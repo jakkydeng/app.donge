@@ -12,11 +12,11 @@ public class MainActivity extends MyBaseActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         super.navigationBarLayout.setVisibility(View.VISIBLE);
-        super.top_textview.setText("医大帮");
+        super.top_textview.setText("医大帮Test");
         initView();
     }
     private void  initView(){
-        View mainView = LayoutInflater.from(this).inflate(R.layout.home_main_layout, super.mainlayout, false);
+        View mainView = LayoutInflater.from(this).inflate(R.layout.main_layout, super.mainlayout, false);
         super.mainlayout.addView(mainView);
     }
 }
