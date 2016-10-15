@@ -1,0 +1,1 @@
+include ':app', ':nf.framework', ':nf.framework.core',  ':nf.framework.expand', ':video_playersdk_v2.0', ':video_playercore_v2.0'

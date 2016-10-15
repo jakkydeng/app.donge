@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <nf.framework.expand.widgets.ProgressWebView
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     android:id="@+id/common_web_main_web_view"
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent"
+     android:focusable="true"
+     android:background="@color/common_web_browser_main_bg" />
+  

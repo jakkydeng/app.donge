@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 加载对话框样式 -->
+    <style name="expand_progress_dialog_style" parent="@android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+    <!-- 对话框样式 -->
+    <style name="expand_base_dialog_style" parent="@android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    <!-- 对话框页面样式 -->
+    <style name="expand_base_dialog_paper_style" parent="@android:Theme.Dialog">
+        <item name="android:background">#ffffff</item>
+        <item name="android:layout_margin">30dp</item>
+        <item name="android:minWidth">250dp</item>
+    </style>
+
+    <style name="expand_base_dialog_btn_style" parent="@android:Theme.Dialog">
+        <item name="android:background">@drawable/expand_btn_selector</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+</resources>

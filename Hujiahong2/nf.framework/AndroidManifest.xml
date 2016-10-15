@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="nf.framework"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:name="nf.framework.app.UILApplication"
+        android:allowBackup="true"
+        android:theme="@android:style/Theme.Light.NoTitleBar" >
+        <activity
+            android:name="nf.framework.demo.DemoSlidingTabActivity"
+            android:label="@string/app_name" >
+         <!--    <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter> -->
+        </activity>
+        <activity
+            android:name="nf.framework.demo.DemoTabBarActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="nf.framework.demo.DemoListActivity"
+            android:label="@string/app_name" >
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="nf.framework.search.SearchActivity"
+            android:label="@string/app_name" >
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+        
+        <activity
+            android:name="nf.framework.act.pic.ImageBrowseActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="nf.framework.MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="nf.framework.act.browser.InnerBrowserActivity"
+            android:label="@string/app_name" >
+        </activity>
+          <activity
+            android:name="nf.framework.act.browser.InnerBrowserByTitleActivity"
+            android:label="@string/app_name" >
+        </activity>
+    </application>
+
+    <uses-permission android:name="android.permission.CALL_PHONE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_CONTACTS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+</manifest>

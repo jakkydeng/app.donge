@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Hujiahong2.iml" filepath="$PROJECT_DIR$/Hujiahong2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nf.framework/nf.framework.iml" filepath="$PROJECT_DIR$/nf.framework/nf.framework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nf.framework.core/nf.framework.core.iml" filepath="$PROJECT_DIR$/nf.framework.core/nf.framework.core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nf.framework.expand/nf.framework.expand.iml" filepath="$PROJECT_DIR$/nf.framework.expand/nf.framework.expand.iml" />
+      <module fileurl="file://$PROJECT_DIR$/video_playercore_v2.0/video_playercore_v2.0.iml" filepath="$PROJECT_DIR$/video_playercore_v2.0/video_playercore_v2.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/video_playersdk_v2.0/video_playersdk_v2.0.iml" filepath="$PROJECT_DIR$/video_playersdk_v2.0/video_playersdk_v2.0.iml" />
+    </modules>
+  </component>
+</project>

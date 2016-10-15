@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="_666666">#666666</color>
+    <color name="_00aaee">#00aaee</color>
+    <color name="_999999">#999999</color>
+    <color name="_7d000000">#7d000000</color>
+    <color name="_777777">#777777</color>
+    <!--00999999  -->
+	<color name="_333333">#333333</color>
+	<color name="_EEEEEE">#EEEEEE</color>
+    <color name="menu_item_selector_pressed">#E7EFE2</color>
+    <color name="menu_item_selector_normal">#ffffff</color>
+    <!-- layout 背景 -->
+    <color name="common_layout_bg">#ffffff</color>
+    <!-- 标题栏 -->
+    <color name="common_navigate_bg">#ae2c27</color>
+
+    <!-- 通用按钮点击 -->
+    <color name="common_btn_selector_normal">@color/common_navigate_bg</color>
+    <color name="common_btn_selector_pressed">#c98885</color>
+
+    <!-- 标题 导航按钮点击 -->
+    <color name="common_navigate_btn_selector_normal">@color/common_navigate_bg</color>
+    <color name="common_navigate_btn_selector_pressed">#5E0400</color>
+
+    <!-- tab按钮点击 -->
+    <color name="common_tab_btn_selector_selected">@color/common_navigate_bg</color>
+    <color name="common_tab_btn_selector_unselect">@color/white</color>
+    <!-- edit inner btn -->
+    <color name="common_edit_inner_btn_selector_normal">#fdb17e</color>
+    <color name="common_edit_inner_btn_selector_pressed">#f7971c</color>
+
+    <!-- menu 文字颜色 -->
+    <color name="common_menu_txt_color">#333333</color>
+
+    <!-- web browser main bg -->
+    <color name="common_web_browser_main_bg">#eeeeee</color>
+    <color name="common_web_toolbar_item_selector_pressed">#E7EFE2</color>
+    <color name="common_web_toolbar_item_selector_normal">#eeeeee</color>
+    <!-- 搜索 -->
+    <color name="search_part_layout_bg">#fafafa</color>
+    <color name="list_item_selector_pressed">#ffffff</color>
+    <color name="list_item_selector_normal">#ffffff</color>
+    <color name="list_item_child_selector_normal">#ffffff</color>
+
+</resources>

@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/black" >
+
+    <nf.framework.expand.widgets.HackyViewPager
+        android:id="@+id/imagebrowser_main_viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <include
+        android:id="@+id/common_basemain_navigationbar_layout"
+        android:layout_alignParentTop="true"
+        layout="@layout/common_top_navigationbar" />
+    
+    <ScrollView
+        android:id="@+id/imagebrowser_main_des_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:background="#50111111" >
+
+        <TextView
+            android:id="@+id/imagebrowser_main_des_txt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:lineSpacingMultiplier="1.2"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+    </ScrollView>
+
+</RelativeLayout>

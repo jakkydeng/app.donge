@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="expand_base_dialog_title">提示</string>
+    <string name="expand_base_dialog_left_btn_txt">left</string>
+    <string name="expand_base_dialog_right_btn_txt">right</string>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 标题栏 -->
+    <color name="common_navigate_bg">#ae2c27</color>
+     
+    <color name="common_btn_selector_pressed">#c98885</color>
+   
+  
+</resources>
