@@ -37,6 +37,18 @@
             android:name="com.example.hujiahong.hujiahong.LeadershipCareActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.example.hujiahong.hujiahong.FloordistributionActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.example.hujiahong.hujiahong.DepartmentResponsibilitiesActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.example.hujiahong.hujiahong.ShowResponsibilitiesActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 

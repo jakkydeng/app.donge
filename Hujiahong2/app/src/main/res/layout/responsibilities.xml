@@ -1,0 +1,220 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp" >
+        <LinearLayout
+            android:id="@+id/bangongshi"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/list_item_selector_normal"
+            android:gravity="center_vertical"
+            android:padding="10dp" >
+
+            <TextView
+                style="@style/userinfo_main_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/_333333"
+                android:text="办公室" />
+        </LinearLayout>
+
+        <include layout="@layout/list_divider" />
+
+
+        <LinearLayout
+            android:id="@+id/zhengzhichu"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/list_item_selector_normal"
+            android:gravity="center_vertical"
+            android:padding="10dp" >
+
+            <TextView
+                style="@style/userinfo_main_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/_333333"
+                android:text="政治处" />
+        </LinearLayout>
+
+        <include layout="@layout/list_divider" />
+
+
+        <LinearLayout
+            android:id="@+id/zhenchajianduke"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/list_item_selector_normal"
+            android:gravity="center_vertical"
+            android:padding="10dp" >
+
+            <TextView
+                style="@style/userinfo_main_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/_333333"
+                android:text="侦查监督科" />
+        </LinearLayout>
+
+        <include layout="@layout/list_divider" />
+
+
+        <LinearLayout
+            android:id="@+id/gongsuke"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/list_item_selector_normal"
+            android:gravity="center_vertical"
+            android:padding="10dp" >
+
+            <TextView
+                style="@style/userinfo_main_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/_333333"
+                android:text="公诉科" />
+        </LinearLayout>
+
+        <include layout="@layout/list_divider" />
+
+
+        <LinearLayout
+            android:id="@+id/fenfantanwuhuluju"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/list_item_selector_normal"
+            android:gravity="center_vertical"
+            android:padding="10dp" >
+
+            <TextView
+                style="@style/userinfo_main_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/_333333"
+                android:text="分反贪污贿赂局" />
+        </LinearLayout>
+
+        <include layout="@layout/list_divider" />
+
+        <LinearLayout
+            android:id="@+id/fanduzhiqinquanju"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/list_item_selector_normal"
+            android:gravity="center_vertical"
+            android:padding="10dp" >
+
+            <TextView
+                style="@style/userinfo_main_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/_333333"
+                android:text="反渎职侵权局" />
+        </LinearLayout>
+
+        <include layout="@layout/list_divider" />
+
+
+        <LinearLayout
+            android:id="@+id/xingshizhixingjianchaju"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/list_item_selector_normal"
+            android:gravity="center_vertical"
+            android:padding="10dp" >
+
+            <TextView
+                style="@style/userinfo_main_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/_333333"
+                android:text="刑事执行检察局" />
+        </LinearLayout>
+
+        <include layout="@layout/list_divider" />
+
+
+        <LinearLayout
+            android:id="@+id/konggaoshensujianchake"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/list_item_selector_normal"
+            android:gravity="center_vertical"
+            android:padding="10dp" >
+
+            <TextView
+                style="@style/userinfo_main_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/_333333"
+                android:text="控告申诉检察科" />
+        </LinearLayout>
+
+        <include layout="@layout/list_divider" />
+
+        <include layout="@layout/list_divider" />
+
+        <LinearLayout
+            android:id="@+id/minshixingzhengke"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/list_item_selector_normal"
+            android:gravity="center_vertical"
+            android:padding="10dp" >
+
+            <TextView
+                style="@style/userinfo_main_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/_333333"
+                android:text="民事行政科" />
+        </LinearLayout>
+
+        <include layout="@layout/list_divider" />
+
+        <LinearLayout
+            android:id="@+id/jianchajishuke"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/list_item_selector_normal"
+            android:gravity="center_vertical"
+            android:padding="10dp" >
+
+            <TextView
+                style="@style/userinfo_main_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/_333333"
+                android:text="检查技术科" />
+        </LinearLayout>
+
+        <include layout="@layout/list_divider" />
+        <LinearLayout
+            android:id="@+id/fajingju"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/list_item_selector_normal"
+            android:gravity="center_vertical"
+            android:padding="10dp" >
+
+            <TextView
+                style="@style/userinfo_main_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/_333333"
+                android:text="法警局" />
+        </LinearLayout>
+
+        <include layout="@layout/list_divider" />
+
+
+        </LinearLayout>
+
+
+</ScrollView>

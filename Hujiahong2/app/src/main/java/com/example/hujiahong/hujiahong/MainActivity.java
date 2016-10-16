@@ -49,10 +49,10 @@ public class MainActivity extends MyBaseActivity implements View.OnClickListener
             IntentUtils.intentToLeadershipCareActivity(this);
         }
         else if (view.equals(rightButton)){
-
+            IntentUtils. intentToFloordistributionActivity(this);
         }
         else if (view.equals(bottomButton)){
-
+            IntentUtils.intentToDepartmentResponsibilitiesActivity(this);
         }
     }
 

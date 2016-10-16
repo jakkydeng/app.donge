@@ -10,6 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 
 import utils.ImageManger;
+import utils.IntentUtils;
 
 /**
  * 领导关怀的滚播图
@@ -33,6 +34,7 @@ public class LeadershipCareActivity extends MyBaseActivity implements View.OnLay
         Log.d("...........", "" + layout.getHeight());
         namescroll.addOnLayoutChangeListener(this);
         System.out.println("开始");
+        //// TODO: 16/10/16 填充数据
         for (int i = 0; i < 10; i++) {
             searchResultShow();
             System.out.println(i + "结束");
@@ -55,11 +57,15 @@ public class LeadershipCareActivity extends MyBaseActivity implements View.OnLay
 
         ImageView imageView = new ImageView(LeadershipCareActivity.this);
         imageView.setImageResource(R.drawable.ic_launcher);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                IntentUtils.intentToMainActivity(LeadershipCareActivity.this);
+            }
+        });
         ImageManger.asyncLoadImage(imageView, "http://uploads.yjbys.com/allimg/201609/3958-1609101IJ4462.jpg");
         //增加一个ImageView到线性布局中
         layout.addView(imageView, p);
-        //  namescroll.addOnLayoutChangeListener(this);
-
     }
 
     private Runnable ScrollRunnable = new Runnable() {
