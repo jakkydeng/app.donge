@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#f0ffff"
+    >
+
+    <Button
+        android:id="@+id/activity_show_up"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/logout_btn_selector_up"
+        android:padding="10dp"
+        android:text="两学一做"
+        android:textSize="18sp"
+        android:textColor="@color/white" />
+
+
+    <Button
+        android:id="@+id/activity_show_bellow"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/logout_btn_selector_bellow"
+        android:padding="10dp"
+        android:text="规范司法行为专项整治工作"
+        android:textSize="18sp"
+        android:textColor="@color/white" />
+
+</LinearLayout>

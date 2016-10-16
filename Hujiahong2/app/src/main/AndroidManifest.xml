@@ -49,6 +49,14 @@
             android:name="com.example.hujiahong.hujiahong.ShowResponsibilitiesActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.example.hujiahong.hujiahong.ActivityShowActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.example.hujiahong.hujiahong.ActivityDetailsActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 

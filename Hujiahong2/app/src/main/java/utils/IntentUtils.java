@@ -3,6 +3,8 @@ package utils;
 import android.content.Context;
 import android.content.Intent;
 
+import com.example.hujiahong.hujiahong.ActivityDetailsActivity;
+import com.example.hujiahong.hujiahong.ActivityShowActivity;
 import com.example.hujiahong.hujiahong.DepartmentResponsibilitiesActivity;
 import com.example.hujiahong.hujiahong.FloordistributionActivity;
 import com.example.hujiahong.hujiahong.LeadershipCareActivity;
@@ -95,11 +97,37 @@ public class IntentUtils {
      * @param activity
 
      */
-    public static void intentToShowResponsibilitiesActivity(Context activity,String s){
+    public static void intentToShowResponsibilitiesActivity(Context activity,String key,String discrib){
 
         Intent intent = new Intent();
         intent.setClass(activity,ShowResponsibilitiesActivity.class);
-        intent.putExtra("key",s);
+        intent.putExtra("key",key);
+        intent.putExtra("dis",discrib);
+        activity.startActivity(intent);
+
+    }
+    /***
+     * 活动展示
+     * @param activity
+
+     */
+    public static void intentToActivityShowActivity(Context activity){
+
+        Intent intent = new Intent();
+        intent.setClass(activity,ActivityShowActivity.class);
+        activity.startActivity(intent);
+
+    }
+    /***
+     * 活动详情
+     * @param activity
+
+     */
+    public static void intentToActivitydetailsActivity(Context activity,String string){
+
+        Intent intent = new Intent();
+        intent.setClass(activity,ActivityDetailsActivity.class);
+        intent.putExtra("top_text",string);
         activity.startActivity(intent);
 
     }

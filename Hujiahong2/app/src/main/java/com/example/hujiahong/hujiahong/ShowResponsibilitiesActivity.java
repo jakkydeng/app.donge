@@ -14,6 +14,7 @@ import android.widget.TextView;
 public class ShowResponsibilitiesActivity extends MyBaseActivity{
     private TextView show_word;
     private String key;
+    private String discrib;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,10 +25,14 @@ public class ShowResponsibilitiesActivity extends MyBaseActivity{
     }
 
     private void loadData() {
-        if (key.equals("bangongshi")){
-            super.top_textview.setText("办公室");
-            show_word.setText("这个是个办公室hahahahahaahahahah这个是个办公室");
-        }
+
+
+
+            super.top_textview.setText(key);
+            show_word.setText(discrib);
+
+
+
     }
 
     private void  initView() {
@@ -38,5 +43,6 @@ public class ShowResponsibilitiesActivity extends MyBaseActivity{
 
     public void getIntentData() {
         key = getIntent().getStringExtra("key");
+        discrib = getIntent().getStringExtra("dis");
     }
 }

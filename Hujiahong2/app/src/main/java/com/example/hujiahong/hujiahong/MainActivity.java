@@ -17,10 +17,11 @@ public class MainActivity extends MyBaseActivity implements View.OnClickListener
     private ImageView leftButton;
     private ImageView rightButton;
     private ImageView bottomButton;
+    private ImageView bottomButton2;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        super.navigationBarLayout.setVisibility(View.VISIBLE);
+        super.navigationBarLayout.setVisibility(View.GONE);
         super.top_textview.setText("医大帮Test");
         initView();
     }
@@ -31,10 +32,12 @@ public class MainActivity extends MyBaseActivity implements View.OnClickListener
         leftButton = (ImageView) mainView.findViewById(R.id.left_button);
         rightButton = (ImageView) mainView.findViewById(R.id.right_button);
         bottomButton = (ImageView) mainView.findViewById(R.id.bottom_button);
+        bottomButton2 = (ImageView) mainView.findViewById(R.id.bottom_button2);
         upButton.setOnClickListener(this);
         leftButton.setOnClickListener(this);
         rightButton.setOnClickListener(this);
         bottomButton.setOnClickListener(this);
+        bottomButton2.setOnClickListener(this);
     }
 
     /**
@@ -53,6 +56,9 @@ public class MainActivity extends MyBaseActivity implements View.OnClickListener
         }
         else if (view.equals(bottomButton)){
             IntentUtils.intentToDepartmentResponsibilitiesActivity(this);
+        }
+        else if (view.equals(bottomButton2)){
+            IntentUtils.intentToActivityShowActivity(this);
         }
     }
 

@@ -3,11 +3,15 @@ package com.example.hujiahong.hujiahong;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.sina.sinavideo.coreplayer.util.LogS;
 import com.sina.sinavideo.sdk.VDVideoExtListeners;
 import com.sina.sinavideo.sdk.VDVideoView;
+import com.sina.sinavideo.sdk.VDVideoViewController;
 import com.sina.sinavideo.sdk.data.VDVideoInfo;
 import com.sina.sinavideo.sdk.data.VDVideoListInfo;
 import com.sina.sinavideo.sdk.log.StatisticUtil;
@@ -30,6 +34,7 @@ public class PersonVideoActivity extends MyBaseActivity implements VDVideoExtLis
     private VDVideoView mVDVideoView = null;
     private final static String TAG = "HorizonVideoActivity";
     private VDVideoPlayListView listView;
+    private RelativeLayout video_back;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,11 +82,39 @@ public class PersonVideoActivity extends MyBaseActivity implements VDVideoExtLis
         mVDVideoView.open(this, infoList);
         //   vDVideoInfoVO.setDuration((int) attach.getViedoTime() * 1000);
         mVDVideoView.play(0);
+        prepareListener(infoList);
     }
-
+    public void prepareListener(final VDVideoListInfo infoList) {
+        VDVideoViewController controller = VDVideoViewController.getInstance(this);
+        if (controller != null) {
+            controller.getExtListener().setOnVDVideoCompletionListener(new VDVideoExtListeners.OnVDVideoCompletionListener() {
+                @Override
+                public void onVDVideoCompletion(VDVideoInfo info, int status) {
+                    int index = infoList.getVideoInfoKey(info);
+                    index++;
+                    if (infoList.getRealVideoInfo(index) != null) {
+                        mVDVideoView.play(index);
+                    } else {
+                        Toast.makeText(PersonVideoActivity.this,"重新播放",Toast.LENGTH_SHORT).show();
+//                        mOnPlayListener.onPlayFinish();//结束播放
+                        mVDVideoView.open(PersonVideoActivity.this, infoList);
+                        //   vDVideoInfoVO.setDuration((int) attach.getViedoTime() * 1000);
+                        mVDVideoView.play(0);
+                    }
+                }
+            });
+        }
+    }
     private void initData() {
         setContentView(R.layout.video_layout);
         mVDVideoView = (VDVideoView) findViewById(R.id.vv1);
+        video_back = (RelativeLayout) findViewById(R.id.back_video);
+        video_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         mVDVideoView.setVDVideoViewContainer((ViewGroup) mVDVideoView.getParent());
         // 简单方式处理的视频列表
        // listView = (VDVideoPlayListView) findViewById(R.id.play_list_view);
