@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 
 import com.example.hujiahong.hujiahong.LeadershipCareActivity;
+import com.example.hujiahong.hujiahong.PersonVideoActivity;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -17,7 +18,7 @@ import VO.VDVideoInfoVO;
 
 public class IntentUtils {
     /***
-     * 视频播放(领导关怀)
+     * 视频播放(个人风采)
      * @param activity
      * @param videoPath
      * @param title
@@ -32,7 +33,19 @@ public class IntentUtils {
         videoInfo.setLive(false);
         videoList.add(videoInfo);
         Intent intent = new Intent();
-        intent.putExtra(LeadershipCareActivity.INTENT_VideoList, (Serializable) videoList);
+        intent.putExtra(PersonVideoActivity.INTENT_VideoList, (Serializable) videoList);
+        intent.setClass(activity, PersonVideoActivity.class);
+        activity.startActivity(intent);
+
+    }
+    /***
+     * 图片轮播(领导关怀)
+     * @param activity
+
+     */
+    public static void intentToLeadershipCareActivity(Context activity){
+
+        Intent intent = new Intent();
         intent.setClass(activity, LeadershipCareActivity.class);
         activity.startActivity(intent);
 

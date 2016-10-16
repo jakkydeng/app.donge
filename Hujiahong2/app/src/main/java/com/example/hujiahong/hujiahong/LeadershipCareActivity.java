@@ -1,170 +1,94 @@
 package com.example.hujiahong.hujiahong;
 
-import android.content.res.Configuration;
+import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.view.KeyEvent;
-import android.view.ViewGroup;
+import android.os.Handler;
+import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
 
-import com.sina.sinavideo.coreplayer.util.LogS;
-import com.sina.sinavideo.sdk.VDVideoExtListeners;
-import com.sina.sinavideo.sdk.VDVideoView;
-import com.sina.sinavideo.sdk.data.VDVideoInfo;
-import com.sina.sinavideo.sdk.data.VDVideoListInfo;
-import com.sina.sinavideo.sdk.log.StatisticUtil;
-import com.sina.sinavideo.sdk.utils.VDVideoFullModeController;
-import com.sina.sinavideo.sdk.widgets.playlist.VDVideoPlayListView;
-
-import java.util.List;
-
-import VO.VDVideoInfoVO;
-import nf.framework.core.exception.LogUtil;
+import utils.ImageManger;
 
 /**
- * Created by hujiahong on 16/10/15.
+ * 领导关怀的滚播图
+ * Created by hujiahong on 16/10/16.
  */
 
-public class LeadershipCareActivity extends MyBaseActivity implements VDVideoExtListeners.OnVDVideoFrameADListener, VDVideoExtListeners.OnVDVideoInsertADListener,
-        VDVideoExtListeners.OnVDVideoPlaylistListener {
+public class LeadershipCareActivity extends MyBaseActivity implements View.OnLayoutChangeListener {
 
-    public static final String INTENT_VideoList ="videoList";
-    private VDVideoView mVDVideoView = null;
-    private final static String TAG = "HorizonVideoActivity";
-    private VDVideoPlayListView listView;
+
+    private LinearLayout layout;
+    private ScrollView namescroll;
+    private final Handler mHandler = new Handler();
+
+    @SuppressLint("NewApi")
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        requestWindowFeature(Window.FEATURE_NO_TITLE);
-
-        StatisticUtil.init(this, null);
-        initData();
-        getIntentData();
-    }
-
-    public void getIntentData() {
-
-        @SuppressWarnings("unchecked")
-        List<VDVideoInfoVO> list	 = (List<VDVideoInfoVO>) getIntent().getSerializableExtra(INTENT_VideoList);
-        getIntent().getSerializableExtra(INTENT_VideoList);
-
-
-        if(list==null){
-            return;
+        setContentView(R.layout.activity_leader_care_main);
+        layout = (LinearLayout) findViewById(R.id.layout);
+        namescroll = (ScrollView) findViewById(R.id.nameScroll);
+        Log.d("...........", "" + layout.getHeight());
+        namescroll.addOnLayoutChangeListener(this);
+        System.out.println("开始");
+        for (int i = 0; i < 10; i++) {
+            searchResultShow();
+            System.out.println(i + "结束");
         }
-        VDVideoListInfo infoList =new VDVideoListInfo();
-        for(VDVideoInfoVO  videoInfovo :list){
-            VDVideoInfo videoInfo =new VDVideoInfo();
-            videoInfo.mPlayUrl =videoInfovo.getUrl();
-            LogUtil.e("我是地址","horizonViedeoActivity 55==="+videoInfovo.getUrl());
-            videoInfo.mTitle =videoInfovo.getTitle();
-            LogUtil.e("我是地址","horizonViedeoActivity 58==="+videoInfovo.getTitle());
+        Log.d("...........", "" + layout.getHeight());
+        System.out.println(namescroll.getScrollY());
+        System.out.println("真正结束");
+    }
 
-            LogUtil.e("我是视频时间1","horizonViedeoActivity 591==="+videoInfovo.getDuration());
-            LogUtil.e("我是视频时间1","horizonViedeoActivity 592==="+videoInfo.mVideoDuration);
-            // videoInfovo.setDuration(300000);
-            videoInfo.mIsLive=videoInfovo.isLive();
-            LogUtil.e("我是地址","horizonViedeoActivity 60==="+videoInfovo.isLive());
-            videoInfo.mVideoDuration=videoInfovo.getDuration();
-            LogUtil.e("我是视频时间1","horizonViedeoActivity 62==="+videoInfovo.getDuration());
-            LogUtil.e("我是视频时间222","horizonViedeoActivity 63==="+videoInfo.mVideoDuration);
+    private void searchResultShow() {
+
+/**
+ * 动态布局
+ */
+        LinearLayout.LayoutParams p = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+        );
 
 
-            infoList.addVideoInfo(videoInfo);
+        ImageView imageView = new ImageView(LeadershipCareActivity.this);
+        imageView.setImageResource(R.drawable.ic_launcher);
+        ImageManger.asyncLoadImage(imageView, "http://uploads.yjbys.com/allimg/201609/3958-1609101IJ4462.jpg");
+        //增加一个ImageView到线性布局中
+        layout.addView(imageView, p);
+        //  namescroll.addOnLayoutChangeListener(this);
 
+    }
+
+    private Runnable ScrollRunnable = new Runnable() {
+        @Override
+        public void run() {
+            int off = layout.getMeasuredHeight() - namescroll.getHeight();//判断高度
+//            System.out.println(layout.getMeasuredHeight()+".........."+namescroll.getHeight() );
+            if (off > 0) {
+                namescroll.smoothScrollBy(0, 1);
+                if (namescroll.getScrollY() == off) {
+                    /**
+                     * 到底回到最上边
+                     */
+                    namescroll.scrollTo(0, 0);
+                    mHandler.postDelayed(this, 30);
+//                    Thread.currentThread().interrupt();
+
+                } else {
+                    mHandler.postDelayed(this, 30);
+                }
+            }
         }
-//        if (listView != null) {
-//            listView.onVideoList(infoList);
-//        }
-        mVDVideoView.open(this, infoList);
-        //   vDVideoInfoVO.setDuration((int) attach.getViedoTime() * 1000);
-        mVDVideoView.play(0);
-    }
-
-    private void initData() {
-        setContentView(R.layout.video_layout);
-        mVDVideoView = (VDVideoView) findViewById(R.id.vv1);
-        mVDVideoView.setVDVideoViewContainer((ViewGroup) mVDVideoView.getParent());
-        // 简单方式处理的视频列表
-       // listView = (VDVideoPlayListView) findViewById(R.id.play_list_view);
-
-        registerListener();
-    }
+    };
 
     @Override
-    protected void onResume() {
-        super.onResume();
-        mVDVideoView.onResume();
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        mVDVideoView.onPause();
-    }
-
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (!mVDVideoView.onVDKeyDown(keyCode, event)) {
-            return super.onKeyDown(keyCode, event);
-        }
-        return true;
-    }
-
-    private void registerListener() {
-        mVDVideoView.setFrameADListener(this);
-        mVDVideoView.setInsertADListener(this);
-        mVDVideoView.setPlaylistListener(this);
-    }
-
-    // private void openVideo(VDVideoInfo info, int p) {
-    // mVDVideoView.stop();
-    // mVDVideoView.release(true);
-    // mVDVideoView.open(this, info);
-    // mVDVideoView.play(p);
-    // }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        mVDVideoView.onStop();
-    }
-
-    @Override
-    protected void onDestroy() {
-        mVDVideoView.release(false);
-        super.onDestroy();
-    }
-
-    @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
-
-        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            mVDVideoView.setIsFullScreen(true);
-            LogS.e(VDVideoFullModeController.TAG, "onConfigurationChanged---横屏");
-        } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
-            mVDVideoView.setIsFullScreen(false);
-            LogS.e(VDVideoFullModeController.TAG, "onConfigurationChanged---竖屏");
-        }
-
-    }
-
-    @Override
-    public void onPlaylistClick(VDVideoInfo info, int p) {
-        if (info == null) {
-            LogS.e(TAG, "info is null");
-        }
-        mVDVideoView.play(p);
-    }
-
-    @Override
-    public void onInsertADClick(VDVideoInfo info) {
-    }
-
-    @Override
-    public void onInsertADStepOutClick(VDVideoInfo info) {
-    }
-
-    @Override
-    public void onFrameADPrepared(VDVideoInfo info) {
+    public void onLayoutChange(View v, int left, int top, int right,
+                               int bottom, int oldLeft, int oldTop, int oldRight,
+                               int oldBottom) {
+        mHandler.post(ScrollRunnable);
+        System.out.println(bottom);
     }
 }

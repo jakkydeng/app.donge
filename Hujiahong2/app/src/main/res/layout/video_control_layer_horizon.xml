@@ -45,7 +45,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/controller_title_share_btn_marginRight"
-            android:padding="@dimen/btn_padding" />
+            android:padding="@dimen/btn_padding"
+            android:visibility="gone"
+            />
     </com.sina.sinavideo.sdk.container.VDVideoControlTopContainer>
 
     <!-- 底部控制栏 -->
