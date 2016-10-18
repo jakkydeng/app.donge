@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--<视频播放的布局高度没有充满改第14行的高度,上部有空白改20行的距离上边多少>-->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
+    android:background="@mipmap/aaa"
+
     android:id="@+id/back_video">
 
     <com.sina.sinavideo.sdk.VDVideoView
         android:id="@+id/vv1"
         android:layout_width="match_parent"
         android:layout_height="240dp"
-
         android:background="#000000"
-        android:layout_centerVertical="true"
-
         app:layerAttrs="@array/only_horizon"
-        >
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="170dp">
     </com.sina.sinavideo.sdk.VDVideoView>
 
 </RelativeLayout>

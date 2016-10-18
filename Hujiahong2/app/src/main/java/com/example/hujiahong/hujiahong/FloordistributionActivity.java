@@ -1,5 +1,6 @@
 package com.example.hujiahong.hujiahong;
 
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,6 +31,19 @@ private ImageView floorPic;
                 finish();
             }
         });
-        ImageManger.asyncLoadImage(floorPic,"https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1476623324&di=07e684acd765160ff974b74559e71d34&src=http://pic9.nipic.com/20100827/5608174_220855012122_2.jpg");
+
+
+
+//            InputStream inputStream = getAssets().open("floor.png");
+
+
+            Bitmap bitmap = ImageManger.readBitMap(this, R.mipmap.floor);
+            ImageManger. CommonScaledBitmap(bitmap,100,1000);
+            floorPic.setImageBitmap(bitmap);
+
+
     }
+
+//       ImageManger.asyncLoadImage(floorPic,"https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1476623324&di=07e684acd765160ff974b74559e71d34&src=http://pic9.nipic.com/20100827/5608174_220855012122_2.jpg");
+
 }

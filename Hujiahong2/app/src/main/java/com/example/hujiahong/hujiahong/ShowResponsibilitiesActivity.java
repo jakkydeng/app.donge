@@ -30,6 +30,12 @@ public class ShowResponsibilitiesActivity extends MyBaseActivity{
 
             super.top_textview.setText(key);
             show_word.setText(discrib);
+        show_word.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
 
 
