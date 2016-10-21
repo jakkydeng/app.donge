@@ -9,6 +9,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import utils.ImageManger;
 import utils.IntentUtils;
 
@@ -23,6 +26,7 @@ public class LeadershipCareActivity extends MyBaseActivity implements View.OnLay
     private LinearLayout layout;
     private ScrollView namescroll;
     private final Handler mHandler = new Handler();
+    private List<String>picList = new ArrayList<>();
 
     @SuppressLint("NewApi")
     @Override
@@ -34,17 +38,38 @@ public class LeadershipCareActivity extends MyBaseActivity implements View.OnLay
         Log.d("...........", "" + layout.getHeight());
         namescroll.addOnLayoutChangeListener(this);
         System.out.println("开始");
+        initData();
         //// TODO: 16/10/16 填充数据
         for (int i = 0; i < 10; i++) {
-            searchResultShow();
+            searchResultShow(i);
             System.out.println(i + "结束");
         }
         Log.d("...........", "" + layout.getHeight());
         System.out.println(namescroll.getScrollY());
         System.out.println("真正结束");
     }
+private void  initData(){
+    picList.add("http://img0.imgtn.bdimg.com/it/u=1186214213,1117178473&fm=15&gp=0.jpg");
+    picList.add("http://img3.imgtn.bdimg.com/it/u=1782195575,562339618&fm=21&gp=0.jpg");
+    picList.add("http://img0.imgtn.bdimg.com/it/u=4151353587,2150503411&fm=21&gp=0.jpg");
 
-    private void searchResultShow() {
+    picList.add("http://img2.imgtn.bdimg.com/it/u=213416909,2087076729&fm=21&gp=0.jpg");
+
+    picList.add("http://img3.imgtn.bdimg.com/it/u=1308851985,3949436698&fm=21&gp=0.jpg");
+
+    picList.add("http://img0.imgtn.bdimg.com/it/u=3036573775,2289438933&fm=21&gp=0.jpg");
+    picList.add("http://img0.imgtn.bdimg.com/it/u=4151353587,2150503411&fm=21&gp=0.jpg");
+
+    picList.add("http://img2.imgtn.bdimg.com/it/u=213416909,2087076729&fm=21&gp=0.jpg");
+
+    picList.add("http://img3.imgtn.bdimg.com/it/u=1308851985,3949436698&fm=21&gp=0.jpg");
+
+    picList.add("http://img0.imgtn.bdimg.com/it/u=3036573775,2289438933&fm=21&gp=0.jpg");
+
+
+
+}
+    private void searchResultShow(int i) {
 
 /**
  * 动态布局
@@ -63,7 +88,7 @@ public class LeadershipCareActivity extends MyBaseActivity implements View.OnLay
                 IntentUtils.intentToMainActivity(LeadershipCareActivity.this);
             }
         });
-        ImageManger.asyncLoadImage(imageView, "http://uploads.yjbys.com/allimg/201609/3958-1609101IJ4462.jpg");
+        ImageManger.asyncLoadImage(imageView, picList.get(i));
         //增加一个ImageView到线性布局中
         layout.addView(imageView, p);
     }

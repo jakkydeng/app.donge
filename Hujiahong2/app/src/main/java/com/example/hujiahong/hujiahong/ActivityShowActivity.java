@@ -45,7 +45,7 @@ public class ActivityShowActivity extends MyBaseActivity implements View.OnClick
    if (v.equals(up)){
        IntentUtils.intentToActivitydetailsActivity(this,"两学一做");
    }else if (v.equals(bellow)){
-       IntentUtils.intentToActivitydetailsActivity(this,"规范司法行为专项整治工作");
+       IntentUtils.intentToActivitydetailsActivity2(this,"规范司法行为专项整治工作");
    }
 
     }

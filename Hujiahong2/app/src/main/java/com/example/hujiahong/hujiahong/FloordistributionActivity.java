@@ -1,12 +1,9 @@
 package com.example.hujiahong.hujiahong;
 
-import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
-
-import utils.ImageManger;
 
 /**
  * 楼层分布
@@ -36,16 +33,16 @@ private ImageView floorPic;
 
 //            InputStream inputStream = getAssets().open("floor.png");
 
-/**
- * 这个方法是加载本地的大图片的方法。
- */
-            Bitmap bitmap = ImageManger.readBitMap(this, R.mipmap.floor);
-            ImageManger. CommonScaledBitmap(bitmap,100,1000);
-            floorPic.setImageBitmap(bitmap);
-//        /**
-//         * 下边是加载小图片的方法如果用下边的需要替换个小图然后注释上边五行代码
-//         */
-//        floorPic.setImageResource(R.mipmap.floor);
+///**
+// * 这个方法是加载本地的大图片的方法。
+// */
+//            Bitmap bitmap = ImageManger.readBitMap(this, R.mipmap.floor);
+//            ImageManger. CommonScaledBitmap(bitmap,100,1000);
+//            floorPic.setImageBitmap(bitmap);
+        /**
+         * 下边是加载小图片的方法如果用下边的需要替换个小图然后注释上边五行代码
+         */
+        floorPic.setImageResource(R.mipmap.floor);
 
     }
 

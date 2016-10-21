@@ -47,11 +47,15 @@ public class ActivityDetailsActivity extends MyBaseActivity {
                 finish();
             }
         });
-        ImageManger.asyncLoadImage(Pic, "https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1476623324&di=07e684acd765160ff974b74559e71d34&src=http://pic9.nipic.com/20100827/5608174_220855012122_2.jpg");
+        ImageManger.asyncLoadImage(Pic, "http://www.legaldaily.com.cn/zfzz/images/attachement/png/site4/20161018/d43d7ecb6d041970399f1d.png");
         title = (TextView) mainView.findViewById(R.id.normal_title);
         content = (TextView) mainView.findViewById(R.id.normal_content);
-        title.setText("我是一个标题啊啊啊啊啊啊");
-        content.setText("负责对全省检察机关司法警察工作的指导；组织落实全省检察机关司法警察队伍建设的规划和措施；制定全省检察机关司法警察管理的规章制度并组织实施；检查监督司法警察执行法律、法规的情况；组织司法警察的教育培训；协助政工部门做好司法警察警衔的评定、调整工作；管理司法警察的警用装备；协调、指挥跨区域的重大警务活动；负责省院直接查处大要案的警务保障；负责省院门卫、大厅值班和机关安全保卫工作；完成检察长交办的其他任务。");
+        title.setText("两学一做");
+        content.setText("（通讯员   刘洋）为进一步深入贯彻落实“两学一做”学习教育，营造浓厚的活动氛围，激发全体干警爱党、爱国、爱检察事业的热情，增强检察干警的职业自豪感和社会责任感，使全体干警补足“精气之钙”，提升“信仰之修”，充分展示新时代检察官的风采。10月17日上午，陕西省宝鸡市凤县人民检察院举办了“两学一做”学习教育主题演讲活动。" +
+
+                "来自全院各个科室的6名青年参赛选手，紧紧围绕“两学一做”主题，从自己的本职工作出发，以身边模范的人和事为素材，结合检察工作实际，从不同角度、不同岗位集中宣扬党规党章党纪和党员的先锋模范作用，以鲜明的立场，鲜活的事例为代表，作为检察机关开展“两学一做”活动扬帆起航。选手们以朴素的语言和真挚的情感，通过富有感染力的演讲，充分展示了凤县检察院青年检察干警朝气蓬勃、昂扬向上的精神风貌，赢得了评委和干警们的阵阵掌声，为大家奉献了一场精彩演讲。演讲结束后，6名评委对参赛选手的表现依次打分，评选出一二三等奖，并由院党领导为获奖选手颁发了表彰证书" +
+
+                "最后，代检察长邓武同志最后发表总结讲话，对本次活动给予了高度评价，并表示以后要继续开展各类演讲、朗诵等活动，全院人人参与、领导率先垂范，真正把该院这只优秀的队伍培养好、锤炼好。");
 
 
 

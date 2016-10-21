@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 
 import com.example.hujiahong.hujiahong.ActivityDetailsActivity;
+import com.example.hujiahong.hujiahong.ActivityDetailsActivity2;
 import com.example.hujiahong.hujiahong.ActivityShowActivity;
 import com.example.hujiahong.hujiahong.DepartmentResponsibilitiesActivity;
 import com.example.hujiahong.hujiahong.FloordistributionActivity;
@@ -127,6 +128,19 @@ public class IntentUtils {
 
         Intent intent = new Intent();
         intent.setClass(activity,ActivityDetailsActivity.class);
+        intent.putExtra("top_text",string);
+        activity.startActivity(intent);
+
+    }
+    /***
+     * 活动详情
+     * @param activity
+
+     */
+    public static void intentToActivitydetailsActivity2(Context activity,String string){
+
+        Intent intent = new Intent();
+        intent.setClass(activity,ActivityDetailsActivity2.class);
         intent.putExtra("top_text",string);
         activity.startActivity(intent);
 
