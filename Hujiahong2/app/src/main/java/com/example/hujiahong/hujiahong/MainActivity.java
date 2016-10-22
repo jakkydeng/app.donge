@@ -7,7 +7,9 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import nf.framework.core.util.android.ExitDoubleClick;
+import nf.framework.core.util.android.PhoneInfoUtils;
 import utils.IntentUtils;
+import utils.UpDateManger;
 
 /**
  * 主菜单
@@ -24,7 +26,12 @@ public class MainActivity extends MyBaseActivity implements View.OnClickListener
         super.navigationBarLayout.setVisibility(View.GONE);
         super.top_textview.setText("医大帮Test");
         initView();
-    }
+        //更新,好比要更新的版本号是1.1，现在是1.0
+        if (!PhoneInfoUtils.getAppVersionNum(this).equals("1.1")) {
+
+            UpDateManger.getInstanse(this).onBtnClick("1.1", "http://zb-files-1.oss-cn-beijing.aliyuncs.com/com.zbsd.ydb.apk");
+        }
+        }
     private void  initView(){
         View mainView = LayoutInflater.from(this).inflate(R.layout.main_layout, super.mainlayout, false);
         super.mainlayout.addView(mainView);
