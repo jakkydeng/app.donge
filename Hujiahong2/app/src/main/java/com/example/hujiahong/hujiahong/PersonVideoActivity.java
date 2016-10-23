@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -22,6 +23,7 @@ import java.util.List;
 
 import VO.VDVideoInfoVO;
 import nf.framework.core.exception.LogUtil;
+import utils.ImageManger;
 
 /**
  * Created by hujiahong on 16/10/15.
@@ -35,6 +37,7 @@ public class PersonVideoActivity extends MyBaseActivity implements VDVideoExtLis
     private final static String TAG = "HorizonVideoActivity";
     private VDVideoPlayListView listView;
     private RelativeLayout video_back;
+    private ImageView video_bg;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -107,6 +110,8 @@ public class PersonVideoActivity extends MyBaseActivity implements VDVideoExtLis
     }
     private void initData() {
         setContentView(R.layout.video_layout);
+        video_bg = (ImageView) findViewById(R.id.video_bg);
+        ImageManger.asyncLoadImage(video_bg,"http://182.254.130.173/app/upload/1.png");
         mVDVideoView = (VDVideoView) findViewById(R.id.vv1);
         video_back = (RelativeLayout) findViewById(R.id.back_video);
         video_back.setOnClickListener(new View.OnClickListener() {

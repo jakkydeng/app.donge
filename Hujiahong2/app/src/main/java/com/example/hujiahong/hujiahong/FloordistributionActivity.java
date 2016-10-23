@@ -5,6 +5,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 
+import utils.ImageManger;
+
+
 /**
  * 楼层分布
  * Created by hujiahong on 16/10/16.
@@ -22,6 +25,7 @@ private ImageView floorPic;
         View mainView = LayoutInflater.from(this).inflate(R.layout.floor_distribution, super.mainlayout, false);
         super.mainlayout.addView(mainView);
         floorPic = (ImageView) mainView.findViewById(R.id.floor_pic);
+
         floorPic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -42,7 +46,8 @@ private ImageView floorPic;
         /**
          * 下边是加载小图片的方法如果用下边的需要替换个小图然后注释上边五行代码
          */
-        floorPic.setImageResource(R.mipmap.floor);
+//        floorPic.setImageResource(R.mipmap.floor);
+        ImageManger.asyncLoadImage(floorPic,"http://182.254.130.173/app/upload/3.png");
 
     }
 
