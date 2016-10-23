@@ -51,7 +51,7 @@ import static nf.framework.fragment.AbsListAdapter.circleOptions;
 
 public class ImageManger {
     public static DisplayImageOptions options = new DisplayImageOptions.Builder()
-            .cacheInMemory(true).cacheOnDisk(true).considerExifParams(true).displayer(new FadeInBitmapDisplayer(0))
+            .cacheInMemory(true).cacheOnDisk(false).considerExifParams(true).displayer(new FadeInBitmapDisplayer(0))
             .imageScaleType(ImageScaleType.EXACTLY_STRETCHED)
             .build();
     public static void asyncLoadImage(ImageView imageView, String imagePath) {
