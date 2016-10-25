@@ -18,6 +18,7 @@ public class ActivityDetailsActivity extends MyBaseActivity {
     private TextView title;
     private TextView content;
     private String top_text;
+    private TextView normal_content2;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -47,18 +48,18 @@ public class ActivityDetailsActivity extends MyBaseActivity {
                 finish();
             }
         });
-        ImageManger.asyncLoadImage(Pic, "http://www.legaldaily.com.cn/zfzz/images/attachement/png/site4/20161018/d43d7ecb6d041970399f1d.png");
+        ImageManger.asyncLoadImage(Pic, "http://58.57.165.71:5001/app/activity/1.jpg");
         title = (TextView) mainView.findViewById(R.id.normal_title);
         content = (TextView) mainView.findViewById(R.id.normal_content);
         title.setText("两学一做");
         title.setVisibility(View.GONE);
-        content.setText("（通讯员   刘洋）为进一步深入贯彻落实“两学一做”学习教育，营造浓厚的活动氛围，激发全体干警爱党、爱国、爱检察事业的热情，增强检察干警的职业自豪感和社会责任感，使全体干警补足“精气之钙”，提升“信仰之修”，充分展示新时代检察官的风采。10月17日上午，陕西省宝鸡市凤县人民检察院举办了“两学一做”学习教育主题演讲活动。" +
+        content.setText("按照我院“两学一做”学习教育实施方案的安排，6月28日上午，院党组书记、检察长孙吉祥为全院党员干警上了一堂专题党课。\n" +
+                "党课讲授中，孙吉祥检察长首先结合自己对“两学一做”学习教育内涵和要求的认识，讲授了重点需要把握的几个方面。同时围绕党章党规和习近平总书记系列重要讲话精神，就落实党中央和习总书记关于全面从严治党和做合格党员的要求，畅谈了认识和体会，为全院党员干警上了一堂理论性、针对性和教育性兼备的党课，进一步提升了全体干警的思想认识。\n" +
+                "孙吉祥检察长强调，希望每位党员干警都能通过这次专题党课学习，自觉联系自身思想实际和工作实际，细心领会，深入思考，与时俱进，融会贯通，学以致用。\n" +
+                "通过专题党课学习，干警们纷纷表态，不仅会通过实际行动不断强化自身党性修养，更会把党员身份和检察干警身份所赋予的职责做得更好，履行得更为完善，为东阿检察发展贡献力量。");
 
-                "来自全院各个科室的6名青年参赛选手，紧紧围绕“两学一做”主题，从自己的本职工作出发，以身边模范的人和事为素材，结合检察工作实际，从不同角度、不同岗位集中宣扬党规党章党纪和党员的先锋模范作用，以鲜明的立场，鲜活的事例为代表，作为检察机关开展“两学一做”活动扬帆起航。选手们以朴素的语言和真挚的情感，通过富有感染力的演讲，充分展示了凤县检察院青年检察干警朝气蓬勃、昂扬向上的精神风貌，赢得了评委和干警们的阵阵掌声，为大家奉献了一场精彩演讲。演讲结束后，6名评委对参赛选手的表现依次打分，评选出一二三等奖，并由院党领导为获奖选手颁发了表彰证书" +
-
-                "最后，代检察长邓武同志最后发表总结讲话，对本次活动给予了高度评价，并表示以后要继续开展各类演讲、朗诵等活动，全院人人参与、领导率先垂范，真正把该院这只优秀的队伍培养好、锤炼好。");
-
-
+        normal_content2 = (TextView) mainView.findViewById(R.id.normal_content2);
+        normal_content2.setVisibility(View.GONE);
 
     }
 

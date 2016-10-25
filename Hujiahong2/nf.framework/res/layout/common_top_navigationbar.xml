@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/common_top_title_part_layout"
     android:layout_width="fill_parent"
-    android:layout_height="48dp"
+    android:layout_height="120dp"
     android:layout_alignParentTop="true"
     android:background="@color/common_navigate_bg" >
 
@@ -10,8 +10,8 @@
 
     <ImageButton
         android:id="@+id/common_base_toptitle_left_img"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
         android:background="@drawable/common_navigate_btn_selector"
@@ -24,7 +24,7 @@
     <RelativeLayout
         android:id="@+id/common_base_toptitle_right_layout"
         android:layout_width="wrap_content"
-        android:layout_height="48dp"
+        android:layout_height="120dp"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true" >
 
@@ -32,7 +32,7 @@
          <TextView
             android:id="@+id/common_base_toptitle_right_txt"
             android:layout_width="wrap_content"
-            android:layout_height="48dp"
+            android:layout_height="120dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:textColor="@color/white"
@@ -47,7 +47,7 @@
         <TextView
             android:id="@+id/common_base_toptitle_right_txt2"
             android:layout_width="wrap_content"
-            android:layout_height="48dp"
+            android:layout_height="120dp"
             android:layout_toLeftOf="@id/common_base_toptitle_right_txt"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
@@ -61,8 +61,8 @@
 
         <ImageButton
             android:id="@+id/common_base_toptitle_right_img"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:adjustViewBounds="true"
@@ -71,8 +71,8 @@
             android:visibility="gone" />
         <ImageButton
             android:id="@+id/common_base_toptitle_right_img2"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             android:layout_toLeftOf="@id/common_base_toptitle_right_img"
             android:layout_centerVertical="true"
             android:adjustViewBounds="true"
@@ -84,7 +84,7 @@
          <TextView
             android:id="@+id/common_base_toptitle_right_textview"
             android:layout_width="wrap_content"
-            android:layout_height="48dp"
+            android:layout_height="120dp"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
             android:gravity="center"
@@ -104,8 +104,9 @@
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
         android:layout_centerInParent="true"
-        android:layout_marginLeft="48dp"
-        android:layout_marginRight="48dp" />
+        android:layout_marginLeft="120dp"
+        android:layout_marginRight="120dp"
+        android:textSize="48sp"/>
 
     <View
         android:id="@+id/common_base_top_line"

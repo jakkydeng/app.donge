@@ -18,7 +18,7 @@
     <RelativeLayout
         android:id="@+id/main_button_layout"
         android:layout_width="610dp"
-        android:layout_height="610dp"
+        android:layout_height="630dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true">
 
@@ -131,8 +131,8 @@
             android:orientation="vertical"
 
             android:layout_alignParentBottom="true"
-            android:layout_marginLeft="40dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginBottom="80dp"
             >
 
             <TextView
@@ -165,8 +165,8 @@
 
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="40dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginBottom="60dp"
             >
 
             <TextView

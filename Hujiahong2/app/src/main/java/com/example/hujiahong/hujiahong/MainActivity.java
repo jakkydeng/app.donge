@@ -86,7 +86,7 @@ public class MainActivity extends MyBaseActivity implements View.OnClickListener
     @Override
     public void onClick(View view) {
         if (view.equals(upButton)){
-            IntentUtils.intentToVideoPlayerAct(this,"http://cdn.course1.mservice.cn/079/all/index.m3u8","凌云鹏主任手术视频",1210000);
+            IntentUtils.intentToVideoPlayerAct(this,"http://182.254.130.173/app/upload/1.mp4","凌云鹏主任手术视频",1210000);
         }else if (view.equals(leftButton)){
             IntentUtils.intentToLeadershipCareActivity(this);
         }

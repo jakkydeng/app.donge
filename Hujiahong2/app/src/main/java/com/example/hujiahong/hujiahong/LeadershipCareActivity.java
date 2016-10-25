@@ -40,7 +40,7 @@ public class LeadershipCareActivity extends MyBaseActivity implements View.OnLay
         System.out.println("开始");
         initData();
         //// TODO: 16/10/16 填充数据
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 6; i++) {
             searchResultShow(i);
             System.out.println(i + "结束");
         }
@@ -49,22 +49,15 @@ public class LeadershipCareActivity extends MyBaseActivity implements View.OnLay
         System.out.println("真正结束");
     }
 private void  initData(){
-    picList.add("http://img0.imgtn.bdimg.com/it/u=1186214213,1117178473&fm=15&gp=0.jpg");
-    picList.add("http://img3.imgtn.bdimg.com/it/u=1782195575,562339618&fm=21&gp=0.jpg");
-    picList.add("http://img0.imgtn.bdimg.com/it/u=4151353587,2150503411&fm=21&gp=0.jpg");
+    picList.add("http://58.57.165.71:5001/app/images/1.jpg");
+    picList.add("http://58.57.165.71:5001/app/images/2.jpg");
+    picList.add("http://58.57.165.71:5001/app/images/3.jpg");
 
-    picList.add("http://img2.imgtn.bdimg.com/it/u=213416909,2087076729&fm=21&gp=0.jpg");
+    picList.add("http://58.57.165.71:5001/app/images/4.jpg");
 
-    picList.add("http://img3.imgtn.bdimg.com/it/u=1308851985,3949436698&fm=21&gp=0.jpg");
+    picList.add("http://58.57.165.71:5001/app/images/5.jpg");
 
-    picList.add("http://img0.imgtn.bdimg.com/it/u=3036573775,2289438933&fm=21&gp=0.jpg");
-    picList.add("http://img0.imgtn.bdimg.com/it/u=4151353587,2150503411&fm=21&gp=0.jpg");
-
-    picList.add("http://img2.imgtn.bdimg.com/it/u=213416909,2087076729&fm=21&gp=0.jpg");
-
-    picList.add("http://img3.imgtn.bdimg.com/it/u=1308851985,3949436698&fm=21&gp=0.jpg");
-
-    picList.add("http://img0.imgtn.bdimg.com/it/u=3036573775,2289438933&fm=21&gp=0.jpg");
+    picList.add("http://58.57.165.71:5001/app/images/5.jpg");
 
 
 
@@ -105,11 +98,11 @@ private void  initData(){
                      * 到底回到最上边
                      */
                     namescroll.scrollTo(0, 0);
-                    mHandler.postDelayed(this, 30);
+                    mHandler.postDelayed(this, 70);
 //                    Thread.currentThread().interrupt();
 
                 } else {
-                    mHandler.postDelayed(this, 30);
+                    mHandler.postDelayed(this, 70);
                 }
             }
         }

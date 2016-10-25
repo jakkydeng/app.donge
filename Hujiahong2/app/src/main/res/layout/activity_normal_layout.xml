@@ -32,10 +32,21 @@
         android:id="@+id/normal_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="22dp"
         android:textColor="#707073"
-        android:textSize="32sp"
+        android:textSize="42sp"
         android:textStyle="bold" />
+        <TextView
+            android:id="@+id/normal_content2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:textColor="#707073"
+            android:textSize="42sp"
+            android:textStyle="bold"
+            android:text="东阿县人民检察院"
+            android:layout_marginRight="100dp"
+            android:gravity="right"/>
 
 </LinearLayout>
     </ScrollView>

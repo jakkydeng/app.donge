@@ -21,7 +21,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/_333333"
-                android:textSize="30sp"
+                android:textSize="35sp"
                 android:text="办公室" />
         </LinearLayout>
 
@@ -42,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/_333333"
                 android:text="政治处"
-                android:textSize="30sp"/>
+                android:textSize="35sp"/>
         </LinearLayout>
 
         <include layout="@layout/list_divider" />
@@ -62,7 +62,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/_333333"
                 android:text="侦查监督科"
-                android:textSize="30sp"/>
+                android:textSize="35sp"/>
         </LinearLayout>
 
         <include layout="@layout/list_divider" />
@@ -82,7 +82,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/_333333"
                 android:text="公诉科"
-                android:textSize="30sp"/>
+                android:textSize="35sp"/>
         </LinearLayout>
 
         <include layout="@layout/list_divider" />
@@ -102,7 +102,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/_333333"
                 android:text="分反贪污贿赂局"
-                android:textSize="30sp"/>
+                android:textSize="35sp"/>
         </LinearLayout>
 
         <include layout="@layout/list_divider" />
@@ -121,7 +121,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/_333333"
                 android:text="反渎职侵权局"
-                android:textSize="30sp"/>
+                android:textSize="35sp"/>
         </LinearLayout>
 
         <include layout="@layout/list_divider" />
@@ -141,7 +141,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/_333333"
                 android:text="刑事执行检察局"
-                android:textSize="30sp"/>
+                android:textSize="35sp"/>
         </LinearLayout>
 
         <include layout="@layout/list_divider" />
@@ -161,7 +161,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/_333333"
                 android:text="控告申诉检察科"
-                android:textSize="30sp"/>
+                android:textSize="35sp"/>
         </LinearLayout>
 
         <include layout="@layout/list_divider" />
@@ -181,7 +181,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/_333333"
                 android:text="民事行政科"
-                android:textSize="30sp"/>
+                android:textSize="35sp"/>
         </LinearLayout>
 
         <include layout="@layout/list_divider" />
@@ -199,8 +199,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/_333333"
-                android:text="检查技术科"
-                android:textSize="30sp"/>
+                android:text="检察技术科"
+                android:textSize="35sp"/>
         </LinearLayout>
 
         <include layout="@layout/list_divider" />
@@ -218,7 +218,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/_333333"
                 android:text="法警局"
-                android:textSize="30sp"/>
+                android:textSize="35sp"/>
         </LinearLayout>
 
         <include layout="@layout/list_divider" />
