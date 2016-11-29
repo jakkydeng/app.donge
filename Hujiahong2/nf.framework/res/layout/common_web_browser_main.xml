@@ -14,7 +14,8 @@
             android:id="@+id/common_web_main_top_bar_layout"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true" >
+            android:layout_alignParentBottom="true"
+            android:visibility="gone">
 
             <ImageView
                 android:id="@+id/common_web_toolbar_goback_btn"

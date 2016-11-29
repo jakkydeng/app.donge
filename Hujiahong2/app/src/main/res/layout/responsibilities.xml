@@ -101,7 +101,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/_333333"
-                android:text="分反贪污贿赂局"
+                android:text="反贪污贿赂局"
                 android:textSize="35sp"/>
         </LinearLayout>
 
@@ -180,7 +180,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/_333333"
-                android:text="民事行政科"
+                android:text="民事行政检察科"
                 android:textSize="35sp"/>
         </LinearLayout>
 

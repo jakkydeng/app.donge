@@ -97,7 +97,9 @@ public class MainActivity extends MyBaseActivity implements View.OnClickListener
             IntentUtils.intentToDepartmentResponsibilitiesActivity(this);
         }
         else if (view.equals(bottomButton2)){
-            IntentUtils.intentToActivityShowActivity(this);
+//           IntentUtils.intentToActivityShowActivity(this);
+          IntentUtils.intentToInnerBrowserAct(this, null, null, "http://www.baidu.com", false);
+
         }
     }
 

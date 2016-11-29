@@ -59,6 +59,7 @@ public class InnerBrowserActivity extends AbsBaseActivity {
 		super.mainlayout.addView(view);
 		super.leftButton.setVisibility(View.VISIBLE);
 		super.leftButton.setImageResource(R.drawable.common_navigate_back_btn);
+		super.navigationBarLayout.setVisibility(View.GONE);
 		relativeLayout = (RelativeLayout) this.findViewById(R.id.common_web_main_top_bar_layout);
 		gobackBtn = (ImageView) this
 				.findViewById(R.id.common_web_toolbar_goback_btn);

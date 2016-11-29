@@ -18,6 +18,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import VO.VDVideoInfoVO;
+import nf.framework.act.browser.InnerBrowserActivity;
+import nf.framework.core.util.android.CheckInternet;
 
 /**
  * Created by hujiahong on 16/10/15.
@@ -119,6 +121,28 @@ public class IntentUtils {
         activity.startActivity(intent);
 
     }
+
+
+    public static void intentToInnerBrowserAct(Context activity,String source,String title,String url,boolean isNeedToken){
+        if(!CheckInternet.checkInternet(activity)){
+
+            return;
+        }
+
+        intentToInnerBrowserActEx(activity, source, title, url);
+        TransitionUtility.RightPushInTrans(activity);
+    }
+    public static void intentToInnerBrowserActEx(Context context,String source,String title,String url) {
+
+        Intent intent=new Intent();
+        intent.setClass(context, InnerBrowserActivity.class);
+        intent.putExtra(InnerBrowserActivity.INTENT_SOURCE, source);
+        intent.putExtra(InnerBrowserActivity.INTENT_TITLE,title);
+        intent.putExtra(InnerBrowserActivity.INTENT_URL, url);
+        context.startActivity(intent);
+
+    }
+
     /***
      * 活动详情
      * @param activity
